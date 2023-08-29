@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Sayfanın tamamını kaplayacak şekilde minimum yükseklik */
+    }
+
+    .content {
+        flex: 1; /* İçerik bölümünün geri kalan boşluğu kaplamasını sağlar */
+    }
+
+    .footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+        text-align: center;
+        position: sticky;
+        bottom: 0;
+    }
+
+    .navbar-custom {
+        background-color: orange !important;
+    }
+
+    .nav-link {
+        font-size: 18px !important;
+    }
+
+    .navbar-nav {
+        margin-left: auto; /* Elemanları sağa hizala */
+    }
+
+    .navbar-nav > li {
+        margin-right: 15px; /* Elemanlar arasındaki boşluğu artırın */
+    }
+</style>
+<body>
+{% block header %}
+    {% include 'header.html' %}
+
+{% endblock %}
+{% block content %}
+{% endblock %}
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        HOŞGELDİNİZ {{ session.username }}!!
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"></a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
